@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Page No. 1</title>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+    <link rel="stylesheet" href="./page1.css">
+</head>
+
+<body>
+    <a href="page0.html"><i class="fa-solid fa-less-than"></i></a>
+    <div class="main">
+        <h1>Finance</h1>
+        <form action="page2.html" target="_self">
+            <h2>Principal</h2>
+            <input type="number" id="ip1" class="ip1" placeholder="Enter the value" required>
+            <br>
+            <div class="radio">
+                <div>
+                    <input type="radio" name="type" id="loan" required>
+                    <label for="loan">
+                        <h4>Loan</h4>
+                    </label>
+                </div>
+                <div>
+                    <input type="radio" name="type" id="invest" required>
+                    <label for="invest">
+                        <h4>Investment</h4>
+                    </label>
+                </div>
+            </div>
+            <div class="int">
+                <h3>Interest rate (%)</h3>
+                <input type="number" id="per" required>
+            </div>
+            <div class="dur">
+                <h3>Duration</h3>
+                <input type="text" id="month" placeholder="Enter duration" required readonly>
+            </div>
+            <button type="submit" id="butten">Next</button>
+        </form>
+    </div>
+
+    <div class="scroll-list" id="scroll-list">
+        <h3>Select Duration</h3>
+        <div class="scrollable-content">
+            <div class="container">
+                <div class="column" data-type="years">
+                    <h4>Years</h4>
+                    <div class="list-item" data-value="1">1</div>
+                    <div class="list-item" data-value="2">2</div>
+                    <div class="list-item" data-value="3">3</div>
+                    <div class="list-item" data-value="4">4</div>
+                    <div class="list-item" data-value="5">5</div>
+                    <div class="list-item" data-value="6">6</div>
+                    <div class="list-item" data-value="7">7</div>
+                    <div class="list-item" data-value="8">8</div>
+                    <div class="list-item" data-value="9">9</div>
+                    <div class="list-item" data-value="10">10</div>
+                </div>
+                <div class="column" data-type="months">
+                    <h4>Months</h4>
+                    <div class="list-item" data-value="0">0</div>
+                    <div class="list-item" data-value="1">1</div>
+                    <div class="list-item" data-value="2">2</div>
+                    <div class="list-item" data-value="3">3</div>
+                    <div class="list-item" data-value="4">4</div>
+                    <div class="list-item" data-value="5">5</div>
+                    <div class="list-item" data-value="6">6</div>
+                    <div class="list-item" data-value="7">7</div>
+                    <div class="list-item" data-value="8">8</div>
+                    <div class="list-item" data-value="9">9</div>
+                    <div class="list-item" data-value="10">10</div>
+                    <div class="list-item" data-value="11">11</div>
+                    <div class="list-item" data-value="12">12</div>
+                </div>
+            </div>
+        </div>
+        <div class="buttons">
+            <button id="ok-button">OK</button>
+            <button class="cancel" id="cancel-button">Cancel</button>
+        </div>
+    </div>
+    <script src="page1.js"></script>
+</body>
+
+</html>

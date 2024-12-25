@@ -1,0 +1,174 @@
+/* Reset default margins and paddings */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Body Styling */
+body {
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-family: 'Arial', sans-serif;
+    background: linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3)), url('weather.jpg') no-repeat center center fixed;
+    background-size: cover;
+    overflow: hidden;
+    animation: moveBackground 15s infinite alternate;
+}
+
+/* Adding a subtle background animation */
+@keyframes moveBackground {
+    0% { background-position: center; }
+    50% { background-position: center 10px; }
+    100% { background-position: center; }
+}
+
+/* Welcome container styling */
+.welcome-container {
+    background: rgba(255, 255, 255, 0.2);
+    border-radius: 15px;
+    padding: 25px;
+    max-width: 90%;
+    width: 30%; /* Ensure container is responsive */
+    text-align: center;
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.3);
+    backdrop-filter: blur(10px);
+    transform: translateY(-30px);
+    animation: slideIn 1s ease-out forwards;
+    position: relative;
+}
+
+/* Animation for the container */
+@keyframes slideIn {
+    from { opacity: 0; transform: translateY(30px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+
+/* Heading styling */
+.welcome-container h1 {
+    font-size: 2.5rem;
+    color: #fff;
+    margin-bottom: 20px;
+    letter-spacing: 1px;
+    animation: fadeInText 2s ease-in-out forwards;
+}
+
+/* Paragraph styling */
+.welcome-container p {
+    font-size: 1.2rem;
+    color: #eee;
+    margin-bottom: 30px;
+    animation: fadeInText 2s ease-in-out forwards;
+}
+
+/* Animation for text */
+@keyframes fadeInText {
+    from { opacity: 0; }
+    to { opacity: 1; }
+}
+
+
+.start-button {
+    background-color: #1a3636;
+    color: #fff;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 50px;
+    cursor: pointer;
+    font-size: 0.9rem;
+    font-weight: bold;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    transition: background-color 0.3s ease, transform 0.3s ease, box-shadow 0.3s ease;
+    animation: fadeInButton 2.5s ease-in-out forwards;
+    box-shadow: 0 5px 15px rgba(0, 123, 255, 0.5);
+}
+
+
+@keyframes fadeInButton {
+    from { opacity: 0; transform: scale(0.8); }
+    to { opacity: 1; transform: scale(1); }
+}
+
+.start-button:hover {
+    background-color: #677d6a;
+    transform: scale(1.05);
+    box-shadow: 0 7px 20px rgba(18, 29, 42, 0.7);
+}
+
+
+.welcome-container::before, .welcome-container::after {
+    content: '';
+    position: absolute;
+    width: 100px;
+    height: 100px;
+    background: rgba(255, 255, 255, 0.1);
+    border-radius: 50%;
+    z-index: -1;
+    animation: floating 6s ease-in-out infinite;
+}
+
+.welcome-container::before {
+    top: -50px;
+    left: -50px;
+}
+
+.welcome-container::after {
+    bottom: -50px;
+    right: -50px;
+    animation-delay: 3s;
+}
+
+@keyframes floating {
+    0%, 100% { transform: translateY(0); }
+    50% { transform: translateY(-20px); }
+}
+
+
+.start-button::before {
+    content: '👉'; 
+    margin-right: 10px;
+    font-size: 1.2rem;
+}
+
+@media (max-width: 768px) {
+    .welcome-container {
+        padding: 15px;
+        max-width: 95%;
+    }
+
+    .welcome-container h1 {
+        font-size: 2rem;
+    }
+
+    .welcome-container p {
+        font-size: 1rem;
+    }
+
+    .start-button {
+        padding: 10px 15px;
+        font-size: 0.8rem;
+    }
+}
+
+@media (max-width: 480px) {
+    .welcome-container {
+        padding: 10px;
+        max-width: 95%;
+    }
+
+    .welcome-container h1 {
+        font-size: 1.5rem;
+    }
+
+    .welcome-container p {
+        font-size: 0.9rem;
+    }
+
+    .start-button {
+        padding: 8px 12px;
+        font-size: 0.7rem;
+    }
+}

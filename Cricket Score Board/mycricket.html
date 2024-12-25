@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cricket Scoreboard</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="mycricket.css">
+</head>
+
+<body>
+    <div id="main">
+        <h1>Cricket Scoreboard</h1>
+        <div id="con1">
+            <button id="ballBtn"><img src="ball1.jpeg" alt="ball" id="ballmove"></button>
+            <input type="text" id="scoreInput" readonly>
+        </div>
+        <div id="con2">
+            <h1>Run :</h1>
+            <div id="run">
+                <input type="button" value="1" class="run" id="run1">
+                <input type="button" value="2" class="run" id="run2">
+                <input type="button" value="3" class="run" id="run3">
+                <input type="button" value="4" class="run" id="run4">
+                <input type="button" value="6" class="run" id="run5">
+                <input type="button" value="W" class="run" id="run6">
+            </div>
+        </div>
+        <div id="con3">
+            <h1>Extras :</h1>
+            <div id="ext">
+                <input type="button" value="No Ball" class="ext" id="noball">
+                <input type="button" value="Wide" class="ext" id="wide">
+                <input type="button" value="Bye" class="ext" id="bye">
+                <input type="button" value="Leg Bye" class="ext" id="legbye">
+            </div>
+        </div>
+        
+        <table id="table">
+            <thead>
+                <tr>
+                    <th>Over</th>
+                    <th>Runs</th>
+                    <th>Balls</th>
+                    <th>4s</th>
+                    <th>6s</th>
+                    <th>wicket</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr class="tab2">
+                    <td colspan="6">
+                        <h4>Team One</h4>
+                    </td>
+                </tr>
+                <tr class="tab1">
+                    <td>Over 1</td>
+                    <td><input type="text" class="runs" readonly></td>
+                    <td><input type="text" class="balls" readonly></td>
+                    <td><input type="text" class="four" readonly></td>
+                    <td><input type="text" class="six" readonly></td>
+                    <td><input type="text" class="wicket" readonly></td>
+                </tr>
+                <tr class="tab1">
+                    <td>Over 2</td>
+                    <td><input type="text" class="runs" readonly></td>
+                    <td><input type="text" class="balls" readonly></td>
+                    <td><input type="text" class="four" readonly></td>
+                    <td><input type="text" class="six" readonly></td>
+                    <td><input type="text" class="wicket" readonly></td>
+                </tr>
+                <tr class="tab2">
+                    <td colspan="6">
+                        <h4>Team Two</h4>
+                    </td>
+                </tr>
+                <tr class="tab1">
+                    <td>Over 1</td>
+                    <td><input type="text" class="runs" readonly></td>
+                    <td><input type="text" class="balls" readonly></td>
+                    <td><input type="text" class="four" readonly></td>
+                    <td><input type="text" class="six" readonly></td>
+                    <td><input type="text" class="wicket" readonly></td>
+                </tr>
+                <tr class="tab1">
+                    <td>Over 2</td>
+                    <td><input type="text" class="runs" readonly></td>
+                    <td><input type="text" class="balls" readonly></td>
+                    <td><input type="text" class="four" readonly></td>
+                    <td><input type="text" class="six" readonly></td>
+                    <td><input type="text" class="wicket" readonly></td>
+                </tr>
+            </tbody>
+        </table>
+        <div id="final">
+            <div class="t1">
+                <h3>Team 1:: Final Score</h3>
+                <td><input type="text" class="totala" readonly></td>
+            </div>
+            <div class="t2">
+                <h3>Team 2:: Final Score</h3>
+                <td><input type="text" class="totalb" readonly></td>
+            </div>
+        </div>
+        <input type="button" value="Check Winner" id="winner">
+    </div>
+    <script src="mycricket.js"></script>
+</body>
+
+</html>

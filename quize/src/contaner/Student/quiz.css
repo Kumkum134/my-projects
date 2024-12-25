@@ -1,0 +1,353 @@
+.Quizs {
+    height: 87vh;
+    width: 100%;
+    position: absolute;
+    background-color: white;
+    z-index: 1000;
+    top: 6.5rem;
+    padding-bottom: 1-px;
+}
+
+.quizs {
+    width: 100%;
+    max-width: 20rem;
+    height: auto;
+    max-height: 33.9rem;
+    padding: 20px;
+    border: 1px solid #ccc;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    overflow-y: scroll;
+    left: 2rem;
+}
+
+.quizs::-webkit-scrollbar {
+    display: none;
+}
+
+.quizs {
+    scrollbar-width: none;
+    -ms-overflow-style: none;
+}
+
+.searchs {
+    height: 1.5rem;
+    width: 100%;
+    max-width: 300px;
+    border-radius: 20px;
+    border: 1px solid #ccc;
+    padding: 0.5rem;
+    background-color: white;
+    margin: 1rem;
+    margin-left: 3rem;
+}
+
+.submits {
+    width: 100%;
+    height: 3rem;
+    margin-bottom: 10px;
+    text-align: center;
+    border-radius: 10px;
+    background-color: transparent;
+    border: 1px solid #72BF78;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+.submits:hover {
+    background-color: #72BF78;
+    color: white;
+    transform: scale(1.05);
+}
+
+.question-container {
+    height: auto;
+    width: 60rem;
+    padding: 20px;
+    position: absolute;
+    left: 26rem;
+    top: 1rem;
+    border: 1px solid #ccc;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.question-container h1 {
+    font-size: 1.5rem;
+}
+
+.timer {
+    position: absolute;
+    right: 1rem;
+    top: 3px;
+    font-size: 1.1rem;
+    animation: pulse 1s infinite;
+}
+
+
+.options button {
+    padding: 1rem;
+    margin: 10px 0;
+    background-color: transparent;
+    border: none;
+    font-size: 1.2rem;
+    border-radius: 10px;
+    display: block;
+    width: 100%;
+    text-align: left;
+    transition: background-color 0.3s, color 0.3s;
+}
+
+.options button:hover {
+    background-color: #72BF78;
+    color: white;
+}
+
+.options .selected {
+    background-color: #4CAF50;
+    color: white;
+}
+
+.navigation-buttons {
+    display: flex;
+    justify-content: right;
+}
+
+.navigation-buttons button {
+    padding: 10px 20px;
+    background-color: #f4f4f4;
+    border: 1px solid #ccc;
+    font-size: 1.2rem;
+    border-radius: 10px;
+    width: 20%;
+    transition: background-color 0.3s, color 0.3s;
+}
+
+.navigation-buttons button:hover {
+    background-color: #72BF78;
+    color: white;
+}
+
+.explanation {
+    height: auto;
+    width: auto;
+    padding: 20px;
+    position: absolute;
+    left: 26rem;
+    top: 28.5rem;
+    border: 1px solid #ccc;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    animation: fadeIn 0.5s ease;
+    transition: transform 0.3s ease-in-out;
+}
+
+.explanation h1 {
+    font-size: 1.7rem;
+    animation: slideIn 0.6s ease;
+}
+
+.explanation p {
+    font-size: 1rem;
+    margin-top: 7px;
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(10px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes slideIn {
+    from {
+        opacity: 0;
+        transform: translateX(-20px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(-20px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes pulse {
+    0% {
+        opacity: 1;
+    }
+
+    50% {
+        opacity: 0.5;
+    }
+
+    100% {
+        opacity: 1;
+    }
+}
+
+@media (max-width: 1024px) {
+    .quizs {
+        width: 30%;
+        max-width: 50%;
+        padding: 1rem;
+    }
+
+    .searchs {
+        width: 40%;
+    }
+    .question-container h1 {
+        font-size: 1.3rem;
+    }
+
+    .options button {
+        margin-top: 1px;
+    }
+
+    .question-container {
+        width: 35rem;
+        left: 25rem;
+    }
+
+    .explanation {
+        width: 35rem;
+        left: 25rem;
+        top: 28rem;
+    }
+}
+
+@media (max-width: 768px) {
+    .quizs {
+        width: 25%;
+        max-width: 60%;
+        height: auto;
+        padding: 1rem;
+    }
+
+    .searchs {
+        width: 30%;
+        left: -1rem;
+    }
+
+    .question-container {
+        width: 27rem;
+        left: 18rem;
+    }
+
+    .question-containers {
+        width: 27rem;
+        left: 18rem;
+    }
+
+    .timer {
+        font-size: 10px;
+    }
+
+    .question-container h1,
+    .question-containers h1 {
+        font-size: 1rem;
+    }
+
+    .options button {
+        font-size: 1.1rem;
+        padding: 10px;
+    }
+
+    .navigation-buttons button {
+        font-size: 1rem;
+    }
+
+    .explanation {
+        padding: 15px;
+        width: 27rem;
+        left: 18rem;
+        top: 27rem;
+    }
+
+    .explanations {
+        padding: 15px;
+        width: 27rem;
+        left: 18rem;
+        top: -14rem;
+    }
+
+    .explanation h1,
+    .explanations h1 {
+        font-size: 1.5rem;
+    }
+
+    .explanation p,
+    .explanations p {
+        font-size: 0.9rem;
+    }
+}
+
+@media (max-width: 480px) {
+    .quizs {
+        width: 85%;
+        padding: 10px;
+    }
+
+    .searchs {
+        width: 80%;
+    }
+
+    .submits {
+        font-size: 0.9rem;
+        height: 2.5rem;
+    }
+
+    .question-container {
+        padding: 10px;
+        width: 20rem;
+        top: 42rem;
+        left: 1rem;
+    }
+
+    .timer {
+        font-size: 10px;
+    }
+
+    .question-container h1 {
+        font-size: 1rem;
+    }
+
+    .options button {
+        font-size: 1rem;
+        padding: 8px;
+    }
+
+    .navigation-buttons button {
+        font-size: 0.9rem;
+    }
+
+    .explanation {
+        padding: 10px;
+        width: 20rem;
+        top: 65rem;
+        left: 1rem;
+    }
+
+    .explanation h1 {
+        font-size: 1.3rem;
+    }
+
+    .explanation p {
+        font-size: 0.8rem;
+    }
+}

@@ -1,0 +1,234 @@
+.Mlogo-container {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    color: #A0D683;
+    overflow: hidden;
+}
+
+.Mlogo {
+    font-family: "Sofia", sans-serif;
+    font-size: 6rem;
+    color: #A0D683;
+    font-weight: bold;
+    display: flex;
+    gap: 2px;
+}
+
+@keyframes fadeUpPopup {
+    0% {
+        opacity: 0;
+        transform: translateY(50px) scale(0.8);
+    }
+
+    50% {
+        opacity: 1;
+        transform: translateY(-10px) scale(1.2);
+    }
+
+    100% {
+        opacity: 1;
+        transform: translateY(0) scale(1);
+    }
+}
+
+@keyframes moveBehind {
+    0% {
+        transform: translateX(0);
+        opacity: 1;
+    }
+
+    100% {
+        transform: translateX(-50px);
+        opacity: 0;
+    }
+}
+
+@keyframes zoomInS {
+    35% {
+        transform: scale(1);
+        opacity: 1;
+    }
+
+    100% {
+        transform: scale(114);
+        opacity: 1;
+        color: black;
+    }
+}
+
+.Mlogo span:nth-child(1) {
+    z-index: 10;
+    animation: fadeUpPopup 1s ease-out forwards, zoomInS 5s ease-in forwards;
+    animation-delay: 0s, 1s;
+    transform-origin: center;
+}
+
+.Mlogo span {
+    position: relative;
+    color: #A0D683;
+    animation: fadeUpPopup 1s ease-out forwards;
+}
+
+.Mlogo span:nth-child(n + 2) {
+    z-index: 1;
+    animation: fadeUpPopup 1s ease-out forwards, moveBehind 1s forwards;
+    animation-delay: calc(0.1s * (var(--n) - 1)), 2s;
+}
+
+.Mlogo span {
+    --n: 1;
+    position: relative;
+}
+
+.Mlogo span:nth-child(2) {
+    --n: 2;
+}
+
+.Mlogo span:nth-child(3) {
+    --n: 3;
+}
+
+.Mlogo span:nth-child(4) {
+    --n: 4;
+}
+
+.Mlogo span:nth-child(5) {
+    --n: 5;
+}
+
+.Mlogo span:nth-child(6) {
+    --n: 6;
+}
+
+.logo1 {
+    height: 4rem;
+    position: absolute;
+    top: 0.5rem;
+    left: 3rem;
+    text-align: center;
+    animation: fadeIn 1.5s ease-in-out;
+}
+
+.text {
+    width: 100%;
+    position: absolute;
+    top: 8rem;
+    text-align: center;
+    animation: fadeIn 2s ease-in-out;
+}
+
+.text h1 {
+    font-size: 3rem;
+    color: #72BF78;
+    font-weight: bold;
+}
+
+.text p {
+    font-size: 1.2rem;
+    color: gray;
+    padding: 0 1rem;
+}
+
+.main {
+    width: 80%;
+    max-width: 400px;
+    margin: 0 auto;
+    position: absolute;
+    top: 18rem;
+    left: 0;
+    right: 0;
+    text-align: center;
+    animation: fadeIn 2.5s ease-in-out;
+}
+
+.btn {
+    height: 8vh;
+    width: 100%;
+    font-size: 1.2rem;
+    border-radius: 25px;
+    border: none;
+    background-color: #508D4E;
+    margin-top: 1rem;
+    color: white;
+    cursor: pointer;
+    transition: background-color 0.3s, color 0.3s;
+    animation: fadeIn 3s ease-in-out;
+}
+
+.btn:hover {
+    background-color: #D6EFD8;
+    color: #000;
+}
+
+@keyframes fadeIn {
+    0% {
+        opacity: 0;
+        transform: translateY(-20px);
+    }
+
+    100% {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@media only screen and (max-width: 768px) {
+    .Mlogo {
+        font-size: 3rem;
+    }
+
+    .logo1 {
+        height: 3rem;
+        left: 1.5rem;
+    }
+
+    .text h1 {
+        font-size: 2.5rem;
+    }
+
+    .text p {
+        font-size: 1rem;
+    }
+
+    .main {
+        width: 70%;
+        top: 15rem;
+    }
+
+    .btn {
+        height: 7vh;
+        font-size: 1rem;
+    }
+}
+
+@media only screen and (max-width: 480px) {
+    .Mlogo {
+        font-size: 2rem;
+    }
+
+    .logo1 {
+        height: 2.5rem;
+        left: 1rem;
+    }
+
+    .text h1 {
+        font-size: 2rem;
+    }
+
+    .text p {
+        font-size: 0.9rem;
+    }
+
+    .main {
+        width: 90%;
+        top: 14rem;
+    }
+
+    .btn {
+        height: 6vh;
+        font-size: 0.9rem;
+    }
+}

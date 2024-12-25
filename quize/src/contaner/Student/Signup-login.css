@@ -1,0 +1,393 @@
+.SignUps {
+  width: 100%;
+  height: auto;
+  background-color: white;
+  z-index: 1000;
+  position: absolute;
+}
+
+.signups {
+  width: 90%;
+  max-width: 29rem;
+  margin: 100px auto;
+  height: auto;
+  padding: 20px;
+  border: 1px solid #ccc;
+  border-radius: 10px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  transition: all 0.3s ease-in-out;
+  opacity: 0;
+  transform: translateY(50px);
+  animation: fadeInUp 0.5s forwards;
+}
+
+.logos1 {
+  position: absolute;
+  top: 1rem;
+  left: 3rem;
+  transform: translateX(-50%);
+  animation: fadeIn 1.5s forwards;
+  height: 4rem;
+}
+
+.signups h2 {
+  text-align: center;
+  margin-bottom: 20px;
+  font-size: 2rem;
+}
+
+.form-controls {
+  margin-bottom: 15px;
+  opacity: 0;
+  transform: scale(0.8);
+  animation: scaleIn 0.3s forwards;
+  animation-delay: 0.5s;
+}
+
+.signups label {
+  display: block;
+  margin-bottom: 5px;
+  font-size: 1.5rem;
+}
+
+.signups input {
+  width: 100%;
+  padding: 8px;
+  box-sizing: border-box;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  font-size: 1.5rem;
+  margin-bottom: 10px;
+}
+
+.errors {
+  color: red;
+  font-size: 12px;
+}
+
+.signups button {
+  width: 50%;
+  padding: 15px;
+  background-color: #4CAF50;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 1rem;
+  display: block;
+  margin: 20px auto;
+  transition: background-color 0.3s ease;
+}
+
+.signup button:hover {
+  background-color: #45a049;
+}
+
+.signups button:disabled {
+  background-color: #ccc;
+}
+
+.signups h3 {
+  text-align: center;
+  margin-top: 1rem;
+}
+
+.Logins2 {
+  width: 95%;
+  height: auto;
+  background-color: white;
+  z-index: 1000;
+  padding: 20px;
+}
+
+.logos22 {
+  position: absolute;
+  top: 1rem;
+  left: 3rem;
+  transform: translateX(-50%);
+  animation: fadeIn 1.5s forwards;
+  height: 3rem;
+}
+
+.logins2 {
+  width: 100%;
+  max-width: 27rem;
+  margin: 150px auto;
+  padding: 20px;
+  border: 1px solid #ccc;
+  border-radius: 10px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  opacity: 0;
+  transform: translateY(50px);
+  animation: fadeIn 0.5s forwards;
+}
+
+@keyframes fadeIn {
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.logins2 h2 {
+  text-align: center;
+  font-size: 2rem;
+  margin-bottom: 20px;
+}
+
+.form-controls2 {
+  margin-bottom: 15px;
+  opacity: 0;
+  transform: scale(0.8);
+  animation: scaleIn 0.3s forwards;
+  animation-delay: 0.5s;
+}
+
+@keyframes scaleIn {
+  to {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+
+.logins2 label {
+  display: block;
+  font-size: 1.25rem;
+  margin-bottom: 5px;
+}
+
+.logins2 input {
+  width: 100%;
+  padding: 10px;
+  box-sizing: border-box;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  font-size: 1.25rem;
+}
+
+.errors2 {
+  color: red;
+  font-size: 12px;
+}
+
+.logins2 button {
+  width: 30%;
+  padding: 15px;
+  background-color: #4CAF50;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 1rem;
+  margin-top: 1rem;
+  margin-left: 35%;
+}
+
+.logins2 button:disabled {
+  background-color: #ccc;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@media only screen and (min-width: 1024px) {
+  .signups {
+    max-width: 35rem;
+    padding: 25px;
+  }
+
+  .signups h2 {
+    font-size: 2.2rem;
+  }
+
+  .signups label {
+    font-size: 1.6rem;
+  }
+
+  .signups input {
+    font-size: 1.6rem;
+    padding: 10px;
+  }
+
+  .signups button {
+    font-size: 1.1rem;
+  }
+
+  .logins2 {
+    max-width: 30rem;
+    padding: 25px;
+  }
+
+  .logins2 h2 {
+    font-size: 2.2rem;
+  }
+
+  .logos22 {
+    top: 1.2rem;
+    left: 7rem;
+    height: 3rem;
+  }
+
+  .logins2 input {
+    font-size: 1.5rem;
+  }
+
+  .logins2 button {
+    font-size: 1.1rem;
+  }
+}
+
+@media (min-width: 768px) and (max-width: 1024px) {
+  .signups {
+    width: 28rem;
+    padding: 20px;
+  }
+
+  .signups h2 {
+    font-size: 2rem;
+  }
+
+  .signups label {
+    font-size: 1.5rem;
+  }
+
+  .signups input {
+    font-size: 1.5rem;
+  }
+
+  .signups button {
+    font-size: 1rem;
+  }
+
+  .logins2 {
+    width: 90%;
+    padding: 20px;
+  }
+
+  .logins2 h2 {
+    font-size: 1.8rem;
+  }
+
+  .logins2 input {
+    font-size: 1.25rem;
+  }
+
+  .logins2 button {
+    font-size: 1rem;
+  }
+
+  .logos22 {
+    top: 1rem;
+    height: 4.5rem;
+  }
+}
+
+@media (max-width: 768px) {
+  .signups {
+    width: 90%;
+    padding: 15px;
+    margin: 50px auto;
+  }
+
+  .signups h2 {
+    font-size: 1.8rem;
+  }
+
+  .signups label {
+    font-size: 1.3rem;
+  }
+
+  .signups input {
+    font-size: 1.4rem;
+  }
+
+  .signups button {
+    width: 100%;
+    padding: 12px;
+    font-size: 1rem;
+  }
+
+  .logins2 {
+    width: 90%;
+    padding: 15px;
+  }
+
+  .logins2 h2 {
+    font-size: 1.75rem;
+  }
+
+  .logins2 input {
+    font-size: 1.1rem;
+  }
+
+  .logins2 button {
+    font-size: 0.9rem;
+  }
+
+  .logos22 {
+    top: 0.75rem;
+    height: 4rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .signups {
+    width: 85%;
+    padding: 10px;
+    margin: 50px auto;
+  }
+
+  .signups h2 {
+    font-size: 1.6rem;
+  }
+
+  .signups label {
+    font-size: 1.2rem;
+  }
+
+  .signups input {
+    font-size: 1.2rem;
+  }
+
+  .signups button {
+    width: 100%;
+    padding: 10px;
+    font-size: 0.9rem;
+  }
+
+  .logins2 {
+    width: 80%;
+    padding: 10px;
+  }
+
+  .logos22 {
+    top: 0.75rem;
+    height: 3.5rem;
+  }
+
+  .logins2 h2 {
+    font-size: 1.5rem;
+  }
+
+  .logins2 label {
+    font-size: 1rem;
+  }
+
+  .logins2 input {
+    font-size: 1rem;
+  }
+
+  .logins2 button {
+    padding: 12px;
+    font-size: 0.85rem;
+  }
+}

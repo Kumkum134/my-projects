@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Weather Dashboard</title>
+    <link rel="stylesheet" href="weather.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css">
+
+</head>
+<style>
+    
+</style>
+
+<body>
+    <div class="container">
+        <div class="header">
+            <div class="toggle-mode">
+                <label class="switch">
+                    <input type="checkbox" id="themeToggle">
+                    <span class="slider"></span>
+                </label>
+                <span id="mode" style="margin-left: 10px;"> Mode</span>
+            </div>
+            
+
+            <div class="search-bar">
+                <input type="text" placeholder="Search for your preferred city...">
+            </div>
+            <button class="location-button">Current Location</button>
+        </div>
+
+        <div class="content">
+            <div class="time-location">
+                <h2>Athens</h2>
+                <h1>00:00</h1>
+                <p>Thursday, 31 Aug</p>
+            </div>
+
+            <div class="weather-summary">
+                <div id="ab1">
+                    <h2>00°C</h2>
+                    <p>Feels like: 00°C</p>
+                    <p>Sunny</p>
+                </div>
+                <div id="ab2">
+                    <img src="moon.png" alt="" id="img1">
+                </div>
+                <div class="weather-details">
+                    <div class="detail-item">
+                        <img src="weather.png" alt="Humidity Icon">
+                        <p>41% Humidity</p>
+                    </div>
+                    <div class="detail-item">
+                        <img src="windy.png" alt="Wind Icon">
+                        <p>2km/h Wind Speed</p>
+                    </div>
+                    <div class="detail-item">
+                        <img src="gauge.png" alt="Pressure Icon">
+                        <p>997hPa Pressure</p>
+                    </div>
+                    <div class="detail-item">
+                        <img src="ultraviolet.png" alt="UV Icon">
+                        <p>UV Index: 8</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="forecast">
+                <h3>5 Days Forecast</h3>
+                <ul>
+                    <li><span>20°C</span> Friday, 1 Sep</li>
+                    <li><span>22°C</span> Saturday, 2 Sep</li>
+                    <li><span>27°C</span> Sunday, 3 Sep</li>
+                    <li><span>18°C</span> Monday, 4 Sep</li>
+                    <li><span>16°C</span> Tuesday, 5 Sep</li>
+                </ul>
+            </div>
+
+            <div class="hourly-forecast">
+                <div id="text1">
+                    <article id="text3">Hourly-<article>Forecast</article>
+                </div>
+                <div id="ab3" class="hourly-forecast-content">
+                    
+                </div>
+            </div>
+
+        </div>
+    </div>
+
+    <script src="weater.js">
+        
+    </script>
+
+</body>
+
+</html>
